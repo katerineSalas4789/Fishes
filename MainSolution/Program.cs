@@ -5,13 +5,11 @@ using System.Linq;
 
 namespace MainSolution
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            int[] fishSizes = new int[] { 4, 3, 2, 1, 5 };
-            int[] fishDirections = new int[] { 0, 1, 0, 0, 0 };
-            Console.WriteLine(solution(fishSizes, fishDirections));
+            Console.WriteLine("The main project it's running/");
         }
 
         public static int solution(int[] A, int[] B)
