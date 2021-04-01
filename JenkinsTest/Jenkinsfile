@@ -1,0 +1,13 @@
+pipeline {
+	agent any
+	tools {
+		MSBuild 'MSBuild.15.0'
+	}
+	stages {
+		stage("Checkout code") {
+			steps {
+				git config remote.origin.url https://github.com/katerineSalas4789/Fishes.git
+			}
+		}
+	}
+}
