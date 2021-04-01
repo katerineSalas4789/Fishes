@@ -10,7 +10,6 @@ namespace MainSolution
         public static void Main()
         {
             Console.WriteLine("The main project it's running");
-            Console.ReadKey();
         }
 
         public static int solution(int[] A, int[] B)
