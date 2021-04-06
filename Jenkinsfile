@@ -32,9 +32,10 @@ pipeline {
                     def MSTest = tool 'MSTest14.0'
                     dir('AlgorithmsTests/bin/Debug/netcoreapp2.1')
                     {
-                        bat "\"${MSTest}\" AlgorithmsTests.dll"
+                        bat "\"${MSTest}\" AlgorithmsTests.dll /logger:trx"
                     }
 		        }
+		        step([$class: 'MSTestPublisher', testResultsFile:"**/*.trx", failOnError: true, keepLongStdio: true])
 		    }
         }
 	}
